@@ -1,0 +1,201 @@
+* {
+  
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Global Conatiner */
+
+#container {
+  max-width: 90%;
+  margin: auto;
+}
+
+.alignShirtContainer {
+  font-size: 0; 
+}
+
+.alignShirtContainer > * {
+  display: inline-block;
+  vertical-align: top;
+  font-size: medium;
+}
+
+/* Shirt Container */
+
+.shirtContainer {
+  padding: 20px;
+}
+
+/* Shirt 1, 2, & 3 Containers */
+.shirtContainer #shirt1Container, .shirtContainer #shirt2Container, .shirtContainer #shirt3Container {
+  position: relative;
+  border: 2px solid #7dc1f0;
+  perspective: 800px;
+}
+
+/* Shirt Flip Box */
+
+.shirtFlipBox {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-left: 2px solid #7dc1f0;
+  border-bottom: 2px solid #7dc1f0;
+  vertical-align: top;
+  font-size: x-large;
+  text-align: center;
+  background: #fff;
+  color: #7dc1f0;
+  padding-top: 3px;
+}
+
+/* Hover Effect for Shirt Flip Box */
+
+.shirtFlipBox:hover {
+  background-color: #7dc1f0;
+  color: #fff;
+} 
+
+/* Hidden Checkbox in Shirt Flip Box Container */
+
+input[type="checkbox"]{
+  /* appearance: none; */
+  position: absolute;
+  right: 0; 
+  top: 10px;
+  display: none;
+}
+
+/* Shirt Image Container */
+
+.shirtImage {
+  margin-top: 40px;
+}
+
+img {
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding: 20px;
+}
+
+
+/* Shirt Icons Container */
+
+.shirtIcons {
+  display: flex; - /* this styling transforms the Shirt Icon Container from a Regular Div into a Flexbox */
+}
+
+/* All Shirt Icons - arrows, heart, size, colorSwatch, cart */
+.shirtIcons > div {
+  flex: 1;
+  height: 70px;
+  font-size: x-large;
+  text-align: center;
+  padding-top: 20px;
+  color: #7dc1f0;
+  border-right: 2px solid #7dc1f0;
+  border-top: 2px solid #7dc1f0;
+}
+
+
+/* HOVER EFFECT */
+
+  /* Add Hover Stylying to All Icons */
+.shirtIcons > div:hover {
+  background-color: #7dc1f0;
+  color: #fff;
+}
+
+  /* Add Hover Effect to colorSwatch icon for "Shirt 2 Container" */
+#shirt2Container .shirtIcons > div:nth-last-child(2):hover {
+  background-color: #7dc1f0;
+  color: #fff;
+}
+
+  /* Add Hover Effect to colorSwatch icon for "Shirt 3 Container" */
+#shirt3Container .shirtIcons > div:nth-last-child(2):hover {
+  background-color: #7dc1f0;
+  color: #fff;
+}
+
+/* DOUBLE BORDER ISSUE - SHIRT ICONS */
+
+/* Remove Right Border from shoppping cart icon in shirts Icons Container to solve double border issue from inherited style */
+  /* The shopping cart icon is the last child of div.shirtIcons */
+.shirtIcons > div:last-child {
+  border-right: none; 
+}
+
+/* Make colorSwatch icon size for "Shirt 1 Container" uniform size */
+#shirt1Container .shirtIcons > div:nth-last-child(2) {
+  font-size: xx-large;
+  padding-top: 15px;
+  width: 2px;
+}
+
+/* Change colorSwatch icon for "Shirt 2 Container" to pink */
+#shirt2Container .shirtIcons > div:nth-last-child(2) {
+  color: #fc8dc6;
+  font-size: xx-large;
+  padding-top: 15px;
+  width: 2px;
+}
+
+/* Change colorSwatch icon for "Shirt 3 Container" to mustard yellow */
+#shirt3Container .shirtIcons > div:nth-last-child(2) {
+  color: #e6c46d;
+  font-size: xx-large;
+  padding-top: 15px;
+  width: 2px;
+}
+
+
+/* Shirt Name and Price Container */
+
+  /* Shirt Properties Container */
+.shirtProperties > * {
+  display: inline-block;
+  vertical-align: top;
+} 
+  /* Shirt Name */
+.shirtName {
+  color: #7dc1f0;
+  /*display: inline-block; */
+  font-size: 24px;
+  float: left; 
+}
+  /* Shirt Price */
+.shirtPrice {
+  float: right;
+  color: #7dc1f0;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+/* Web Responsiveness */
+
+/* @media (max-width: 700px) {
+  .shirtContainer {
+    width: 75%;
+  }
+  #container {
+    margin: auto;
+    text-align: center;
+  }
+} */
+
+
+
+@media (min-width: 992px) {
+  .shirtContainer {
+    width: 33.33%;
+  }
+  #container {
+    margin: auto;
+  }
+}
+
